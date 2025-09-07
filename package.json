@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^24.3.1",
     "vitepress": "^1.6.4",
     "vitepress-auto-navigation": "^0.0.4"
   }
