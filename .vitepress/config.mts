@@ -19,6 +19,10 @@ export default defineConfig({
       {
         text:'代码规范',
         link:'/code_standard'
+      },
+      {
+        text:'js知识点',
+        link:'/js_points'
       }
     ],
     sidebar: {
@@ -133,7 +137,22 @@ export default defineConfig({
             }
           ]
         }
-      ]
+      ],
+      '/js_points':[
+        {
+          text:'js知识点',
+          items:[
+            {
+              text:'this的指向',
+              link:'/js_points/this'
+            },
+            {
+              text:'闭包',
+              link:'/js_points/闭包'
+            }
+          ]
+        }
+      ],
     },
     docFooter: {
       prev: '上一页',
