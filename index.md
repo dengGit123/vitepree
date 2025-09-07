@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: VitePress
+  name: VitePress11
   text: Vite & Vue powered static site generator.
   tagline: Lorem ipsum...
   image:
