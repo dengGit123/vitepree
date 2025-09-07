@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base:process.env.NODE_ENV === 'production' ? '/vitepree/' : '/',
+  outDir:"./dist",
   title: "项目文档记录说明",
   description: "记录项目中的说明",
   lastUpdated: true,
