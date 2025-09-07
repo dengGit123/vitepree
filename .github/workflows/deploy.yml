@@ -16,7 +16,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .vitepress/dist
+          publish_dir: ./dist
           publish_branch: master  # 强制指定部署到master分支
           force_orphan: true      # 清空部署目录历史记录
           keep_files: false       # 不保留现有文件
