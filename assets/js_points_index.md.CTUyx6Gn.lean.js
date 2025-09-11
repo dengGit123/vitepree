@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.Dwd5JCA7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"js_points/index.md","filePath":"js_points/index.md","lastUpdated":1757602575000}'),a={name:"js_points/index.md"};function n(o,r,i,d,c,p){return s(),t("div")}const f=e(a,[["render",n]]);export{m as __pageData,f as default};

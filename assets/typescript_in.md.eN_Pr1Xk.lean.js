@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./chunks/framework.Dwd5JCA7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"typescript/in.md","filePath":"typescript/in.md","lastUpdated":1757602575000}'),r={name:"typescript/in.md"};function s(n,c,p,i,o,d){return a(),e("div")}const f=t(r,[["render",s]]);export{m as __pageData,f as default};
