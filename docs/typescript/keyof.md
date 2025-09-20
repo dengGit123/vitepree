@@ -2,7 +2,7 @@
 * 主要用于获取对象类型的键的集合，把键名作为联合类型返回
 ## 一. 基础概念
 ### 1. 核心作用
-* 提取对象类型的所有键名(**属性名**)，得到键名字面量类型组成的联合类型(**字符串或数字字面量的联合类型**)
+* 提取对象**类型**的所有键名(**属性名**)，得到**键名字面量类型**组成的联合类型(**字符串或数字字面量的联合类型**)
 ```
 interface Person {
   name: string;
@@ -43,7 +43,7 @@ interface Person {
 type Keys = keyof Person; // "name" | "age"; 等价于 type Keys = "name" | "age";
 ```
 ## 三. 典型应用场景
-* 1. 类型安全属性访问
+### 1. 类型安全属性访问
   * 通过泛型约束确保函数参数为对象的合法键
 ```
 function getProp<T, K extends keyof T>(obj: T, key: K): T[K] {
@@ -53,20 +53,20 @@ const user = { name: "Alice", age: 30 };
 getProp(user, "name"); // 正确
 getProp(user, "email"); //编译错误，因为"email"不是user的键
 ```
-* 2. 动态校验对象属性
+### 2. 动态校验对象属性
   *  限制函数只能操作对象存在的属性
 ```
 function updateProp<T, K extends keyof T>(obj: T, key: K, value: T[K]) {
   obj[key] = value; // 键和值类型均受约束
 }
 ```
-* 3. 枚举类型键提取
+### 3. 枚举类型键提取
   * 提取枚举类型的所有键名
 ```
 enum Status { Error = -1, Init = 0 }
 type StatusKeys = keyof typeof Status; // "Error" | "Init"; 等价于 type StatusKeys = "Error" | "Init";
 ```
-* 4. 映射类型
+### 4. 映射类型
   * 用于创建基于对象键的类型映射
 ```
 type ReadonlyKeys<T> = {
