@@ -1,0 +1,10 @@
+import{_ as a,c as s,o as e,ae as t}from"./chunks/framework.Dwd5JCA7.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/js_points/闭包.md","filePath":"docs/js_points/闭包.md","lastUpdated":1758337320000}'),o={name:"docs/js_points/闭包.md"};function l(i,n,p,c,r,d){return e(),s("div",null,[...n[0]||(n[0]=[t(`<h2 id="什么是闭包" tabindex="-1">什么是闭包 <a class="header-anchor" href="#什么是闭包" aria-label="Permalink to &quot;什么是闭包&quot;">​</a></h2><ul><li>是指一个函数可以记住并且访问其词法作用域，即该函数在其词法作用域之外执行。</li></ul><h2 id="核心特点" tabindex="-1">核心特点 <a class="header-anchor" href="#核心特点" aria-label="Permalink to &quot;核心特点&quot;">​</a></h2><ol><li><strong>词法作用域的延续</strong>: 内部函数可以访问外部函数的变量，即使外部函数已经执行完毕。</li><li><strong>变量的持久化</strong>：会将引用的外部变量保存在内存中，不会被垃圾回收机制清除</li></ol><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>function outer() {</span></span>
+<span class="line"><span>    let count = 0;</span></span>
+<span class="line"><span>    return function inner() {</span></span>
+<span class="line"><span>        count++;</span></span>
+<span class="line"><span>        console.log(count);</span></span>
+<span class="line"><span>    };</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>const counter = outer();</span></span>
+<span class="line"><span>counter(); // 输出 1</span></span>
+<span class="line"><span>counter(); // 输出 2</span></span></code></pre></div><ul><li><strong>关键点解释‌：</strong></li><li><code>inner</code>函数形成了闭包，保留了对外部函数<code>outer</code>中变量<code>count</code>的引用</li><li>每次调用<code>counter()</code>时，<code>count</code>的值会累积，而不是重置</li></ul><h2 id="注意事项" tabindex="-1">注意事项 <a class="header-anchor" href="#注意事项" aria-label="Permalink to &quot;注意事项&quot;">​</a></h2><ul><li>滥用闭包可能导致内存泄漏（需手动解除引用）</li><li>闭包中的变量是引用而非拷贝，需注意循环中的闭包陷阱</li></ul>`,8)])])}const h=a(o,[["render",l]]);export{_ as __pageData,h as default};
